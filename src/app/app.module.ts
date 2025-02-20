@@ -6,15 +6,17 @@ import { AppComponent } from './app.component';
 import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { environment } from './enviroments/environments';
 import { getFirestore, provideFirestore } from '@angular/fire/firestore';
+import { CustomerComponent } from "./components/customer/customer.component";
 
 @NgModule({
   declarations: [
-    AppComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  AppComponent,
+  CustomerComponent
+],
+imports: [
+  BrowserModule,
+  AppRoutingModule
+],
   providers: [
     provideFirebaseApp(() => initializeApp(environment.firebaseConfig)), //firebase összekötése az angularrel
     provideFirestore(() => getFirestore()), //firestore összekötése az angularrel

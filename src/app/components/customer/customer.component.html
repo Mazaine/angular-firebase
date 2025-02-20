@@ -1,1 +1,7 @@
-<p>customer works!</p>
+<div *ngFor="let customer of customerList">
+    <ul>
+        <li>{{ customer.City }}</li>
+        <li>{{ customer.Name }}</li>
+        <li>{{ customer.id }}</li>
+    </ul>
+</div>

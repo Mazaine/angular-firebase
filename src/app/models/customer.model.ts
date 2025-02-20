@@ -1,5 +1,5 @@
 export interface CustomerModel{
     id: string;
-    name: string;
-    city: string;
+    Name: string;
+    City: string;
 }
