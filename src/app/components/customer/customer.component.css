@@ -1,0 +1,27 @@
+.customer-card {
+    width: 20%;
+    background: rgba(255, 20, 147, 0.2); /* Neon pink átlátszó háttér */
+    border: 2px solid #ff1493; /* Neon pink keret */
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #ff1493, 0 0 20px rgba(255, 20, 147, 0.5);
+    color: #fff;
+    font-family: 'Orbitron', sans-serif;
+    transition: transform 0.3s ease-in-out;
+}
+
+.customer-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #ff1493, 0 0 30px rgba(255, 20, 147, 0.8);
+}
+
+.customer-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.customer-card li {
+    margin: 5px 0;
+    text-shadow: 0 0 5px rgba(255, 20, 147, 0.8);
+}

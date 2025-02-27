@@ -1,7 +1,21 @@
-<div *ngFor="let customer of customerList">
+
+<div *ngFor="let customer of customerList" class="customer-card">
     <ul>
-        <li>{{ customer.City }}</li>
-        <li>{{ customer.Name }}</li>
-        <li>{{ customer.id }}</li>
+        <li><strong>City:</strong> {{ customer.city }}</li>
+        <li><strong>Name:</strong> {{ customer.name }}</li>
+        <li><strong>ID:</strong> {{ customer.id }}</li>
+        <button (click)="deleteCustomer(customer.id)">Vásárló törlése</button>
     </ul>
+</div>
+<div class="container ">
+    <form #f="ngForm" (ngSubmit)="addCustomer(f.value)">
+        <label for="city">Város:</label>
+        <input type="text" name="city" id="city" ngModel required> <br>
+        <label for="name">Név:</label>
+        <input type="text" name="name" id="name" ngModel required> <br>
+        <label for="url">Url:</label>
+        <input type="text" name="url" id="url" ngModel required> <br>
+        <button>Küldés</button>
+    </form>
+    <button (click)="clearCustomers()">Lista törlése</button>
 </div>
